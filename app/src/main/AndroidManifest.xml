@@ -4,7 +4,6 @@
     <!--android:enabled="true" 设置application能否被android系统实例化，true能实例化，false不能实例化并且内部组件都不能被实例化，默认值为：true-->
     <application
         android:allowBackup="true"
-        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -24,8 +23,7 @@
         <service
             android:name=".ServiceStudy.MyServiceOne"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"></service>
     </application>
 
 </manifest>
