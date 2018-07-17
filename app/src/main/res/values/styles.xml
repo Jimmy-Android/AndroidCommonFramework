@@ -7,9 +7,25 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <!--App冷启动样式1-->
+    <!--推荐方式：找一张图片当做背景图-->
+    <style name="AppColdTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_beauty_3</item>
+    </style>
+    <!--App冷启动样式2-->
+    <!--这种方式会：打开App的时，会有一种停在桌面的错觉-->
+    <style name="AppColdThemeOne" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--App冷启动样式3-->
+    <style name="AppColdThemeTwo" parent="android:Theme.Translucent.NoTitleBar.Fullscreen"></style>
+
 
 </resources>

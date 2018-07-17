@@ -138,3 +138,13 @@
     *                *  v23               *
     *                *  etc.              *
     **************************************************************************************************
+5、Android冷启动的优化方式
+    1、尽量不要在Application中进行业务的操作。
+    2、尽量不要在Application中进行耗时的操作。
+    3、尽量不要以静态变量的方式在Applicaion中保存数据。
+    4、减少LaunchActivity的View层级，减少View测量绘制时间
+    5、减少布局的复杂性，因为测量与绘制比较消耗性能
+6、Android JNI知识
+    1、.so库命名的时候要加lib前缀
+    2、System.loadLibrary("xxx")去掉前缀，System.load("xxx.so")不能去掉前缀。
+    3、实用NDK编译的时候，要使用app的minSdkVersion对应的编译平台，因为NDK不是向后兼容的。
