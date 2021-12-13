@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Library</string>
+
+    <string name="all_video">所有视频</string>
+    <string name="picture_error">图片已损坏</string>
+    <string name="video_error">视频已损坏</string>
+    <string name="audio_error">音频已损坏</string>
+</resources>

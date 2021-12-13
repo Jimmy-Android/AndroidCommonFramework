@@ -1,0 +1,60 @@
+ext {
+    appName = [
+            test : "H-work测试",
+            stage: "H-work预生产",
+            prod : "H-work"
+    ]
+    appId = [
+            test : "com.haier.hwork.new.test",
+            stage: "com.haier.hwork.new.stage",
+            prod : "com.haier.hwork.new"
+    ]
+    appVersion = [
+            testCode : 1,
+            testName : "1.0.0.50",
+            stageCode: 1,
+            stageName: "1.0.0.20",
+            /*上线使用*/
+            prodCode : 40,
+            prodName : "1.0.0.40",
+            /*开发测试过程中使用-比上线的后面多加1*/
+//            prodCode : 401,
+//            prodName : "1.0.0.401"
+    ]
+    consts = [
+            uc_test                 : "j/ygj+YItiSU+LipznamcKFD5gt/7+0uNnIkCRrUa4RZbgHna2nkP1IHzxgXhVyJpcncXsLTrgBqyxAe3mRPJg==",
+            uc_stage                : "N+YinOr69rr7yzfVb9VzBAjNGzMuZAIRv6tYpH1BgJxN4eBkU02TVVRH++8BmVSVdYOD6ykRtzZkIA8Rv7Lgzg==",
+            uc_prod                 : "QcM5CSv597yjm5T1q8a19pYrRJqiJ4kPCcfnA3/felAZpLoyQx5Q/LtjBIY34EhXbR94cbvslk0MBJfUWHm1NQ==",
+            amap_test               : "f9854e2376be02a8cb646b09f5bbf3f9",
+            amap_stage              : "7c1a8a4e28cb9e71cc8cb8a416bcd76d",
+            amap_prod               : "253fc58b9b751557b9b5ee66a6af2fc6",
+            apihost_test            : '"https://iwork-dev.jsh.com"',
+            apihost_stage           : '"https://iwork-stage.jsh.com"',
+            apihost_prod            : '"https://hwork-new.jsh.com"',
+            sys_test                : '"/system/test"',
+            sys_stage               : '"/system"',
+            sys_prod                : '"/system"',
+            bpm_test                : '"/bpm/test"',
+            bpm_stage               : '"/bpm"',
+            bpm_prod                : '"/bpm"',
+            gio_id_test             : '93c2e11b0ba77242',
+            gio_id_stage            : '93c2e11b0ba77242',
+            gio_id_prod             : 'ae2eee21ce6f705e',
+            gio_url_test            : 'growing.3264d5e3fe7f1ccf',
+            gio_url_stage           : 'growing.3264d5e3fe7f1ccf',
+            gio_url_prod            : 'growing.e3a0c8233365269d',
+            fish_meeting_test       : '"http://testhaier.jushanghui.com/bspfront"',
+            fish_meeting_prod       : '"http://58.56.174.18:9001"',
+            classroom_homework_test : '"http://study-dev.ylhtest.com/hwork"',
+            classroom_homework_stage: '"https://study-pre.ylhtest.com/hwork"',
+            classroom_homework_prod : '"https://study.yilihuo.com/hwork"',
+            tab_permission_test     : '"/system/test/inner/v1/privilege/valid"',
+            tab_permission_prod     : '"/system/inner/v1/privilege/valid"',
+            get_micro_industry_test : '"/qwrgqk/test/api/v1/user/privilege/queryUserPrivilegeStr"',
+            get_micro_industry_prod : '"/qwrgqk/api/v1/user/privilege/queryUserPrivilegeStr"',
+            easy_tally_fen_test     : '"https://bi-report.ylhtest.com/h5/analysis-list"',
+            easy_tally_fen_stage    : '"https://bi-report-pre.jsh.com/h5/"',
+            easy_tally_fen_prod     : '"https://bi-report.jsh.com/h5/"',
+
+    ]
+}
