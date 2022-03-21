@@ -3,6 +3,7 @@
     package="com.example.jimmy.androidcommonframework">
     <!--android:enabled="true" 设置application能否被android系统实例化，true能实例化，false不能实例化并且内部组件都不能被实例化，默认值为：true-->
     <application
+        android:name=".application.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ActivityStudy.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,9 +22,35 @@
         <!-- android:enabled="true" 设置service能否被android系统实例化，true能实例化，false不能实例化，默认值为：true，<application>也有这个字段-->
         <!-- android:exported="true" 指示其他应用程序的组件是否可以调用service或者和service交互-->
         <service
-            android:name=".ServiceStudy.MyServiceOne"
+            android:name=".service.MyServiceOne"
             android:enabled="true"
             android:exported="true"></service>
+        <!-- BroadcastReceiver静态注册 -->
+        <!-- Android 4.3以上的版本，是允许将程序安装到SD卡上的，就会收不到开机广播 -->
+        <receiver
+            android:name=".receiver.PhoneStatusReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.PhoneBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.cation.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 监听手机开机权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 </manifest>

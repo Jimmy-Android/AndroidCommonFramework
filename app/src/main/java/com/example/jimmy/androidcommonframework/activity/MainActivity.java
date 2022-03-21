@@ -1,14 +1,19 @@
-package com.example.jimmy.androidcommonframework.ActivityStudy;
+package com.example.jimmy.androidcommonframework.activity;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.jimmy.androidcommonframework.R;
+import com.example.jimmy.androidcommonframework.receiver.PhoneStatusReceiver;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by Jimmy on 2018/4/7.
@@ -18,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
     private Intent intent;
     private Button button;
+    private BroadcastReceiver mBroadcastReceiver;
     public MainActivity() {
         super();
         Log.d(TAG,"执行了MainActivity()无参构造方法");
@@ -76,5 +82,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private void initView(){
         button = this.findViewById(R.id.sevStuActBtn);
         button.setOnClickListener(this);
+    }
+
+
+    /**
+     * 动态注册BroadcastReceiver
+     * @param v
+     */
+    public void registerIt(View v) {
+        Log.i(TAG, "registerIt");
+        mBroadcastReceiver = new PhoneStatusReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(TelephonyManager.ACTION_PHONE_STATE_CHANGED);
+        intentFilter.setPriority(Integer.MAX_VALUE);
+        registerReceiver(mBroadcastReceiver, intentFilter);
+    }
+
+    /**
+     * 页面销毁反注册（注销）BroadcastReceiver
+     * @param v
+     */
+    public void unregisterIt(View v) {
+        Log.i(TAG, "unregisterIt");
+        unregisterReceiver(mBroadcastReceiver);
     }
 }

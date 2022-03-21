@@ -1,12 +1,13 @@
-package com.example.jimmy.androidcommonframework.ActivityStudy;
+package com.example.jimmy.androidcommonframework.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 
 import com.example.jimmy.androidcommonframework.R;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by Jimmy on 2018/4/7.

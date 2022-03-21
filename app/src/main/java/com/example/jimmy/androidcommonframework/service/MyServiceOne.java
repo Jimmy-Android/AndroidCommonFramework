@@ -1,4 +1,4 @@
-package com.example.jimmy.androidcommonframework.ServiceStudy;
+package com.example.jimmy.androidcommonframework.service;
 
 import android.app.Service;
 import android.content.Intent;

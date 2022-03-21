@@ -1,0 +1,28 @@
+<html>
+<script language="javascript">
+    /* This function is invoked by the activity */
+    /* 这个函数被Activity调用的活动 这里的图片我们可以在它的连接里面下载 android_waving.png */
+    function wave() {
+    /* 这里是一个javascript 自定义函数，这是由我们在android的程序里调用的，不在在HTML中调用*/
+      document.getElementById("droid").style.background="red";
+    }
+   function hello(){
+        alert('hellow world');
+        document.getElementById("droid").src="ic_launcher.png";
+     }
+
+</script>
+<body>
+<!-- Calls into the javascript interface for the activity -->
+<!-- 从HTML文件中调用activity中的函数 -->
+<!-- 也就是从HTML到android程序 留意window.demo.clickOnAndroid()这句话 -->
+<a onClick="window.demoJavaScriptInterface.clickOnAndroid()">
+    <div id="droid" style="width:80px; margin:0px auto;padding:
+                10px;text-align:center;background:#23A6E9">
+        Click me!
+    </div>
+</a>
+<br>
+<button onclick="window.helloWorld.show()">click</button>
+</body>
+</html>
