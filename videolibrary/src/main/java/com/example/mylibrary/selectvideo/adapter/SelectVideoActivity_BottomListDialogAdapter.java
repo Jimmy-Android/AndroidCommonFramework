@@ -78,8 +78,8 @@ public class SelectVideoActivity_BottomListDialogAdapter extends BaseAdapter {
 
         Glide
                 .with(context)
-                .load(Uri.fromFile(new File(AllList.get(album).get(0).getPath())))
                 .asBitmap()
+                .load(Uri.fromFile(new File(AllList.get(album).get(0).getPath())))
                 .into(icon);
 
 //        icon.setImageBitmap(AllList.get(album).get(0).getThumbnail());

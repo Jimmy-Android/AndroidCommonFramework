@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.widget.ImageView;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * 自定义图片加载方式

@@ -37,6 +37,12 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/EasyPhotosTheme" />
+
+        <activity
+            android:name="com.huantansheng.easyphotos.imaging2.IMGEditActivity"
+            android:theme="@style/ImgEditTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
     </application>
 
 </manifest>

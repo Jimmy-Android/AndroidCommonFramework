@@ -10,7 +10,7 @@ import android.os.Build;
 import android.text.TextPaint;
 import android.view.View;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.huantansheng.easyphotos.EasyPhotos;
 

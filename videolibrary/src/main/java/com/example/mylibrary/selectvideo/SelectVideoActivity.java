@@ -10,12 +10,12 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -339,9 +339,9 @@ public class SelectVideoActivity extends DefaultBaseActivity implements SwipeRef
             helper.addOnClickListener(R.id.img_play_video);
             helper.addOnClickListener(R.id.tv_video_select);
             Glide.with(context)
-                    .load(Uri.fromFile(new File(item.getPath())))
-                    .asBitmap()
-                    .into(imgVideo);
+                 .asBitmap()
+                 .load(Uri.fromFile(new File(item.getPath())))
+                 .into(imgVideo);
         }
     }
 

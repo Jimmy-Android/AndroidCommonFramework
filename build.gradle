@@ -44,6 +44,18 @@ buildscript {
 // mavenCentral()、google()等，
 allprojects {
     repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/google/'
+            name 'aliyun-google'
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         jcenter()
         google()
     }

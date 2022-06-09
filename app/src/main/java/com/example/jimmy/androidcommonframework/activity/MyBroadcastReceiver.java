@@ -7,6 +7,7 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.view.View;
 
+import com.example.jimmy.androidcommonframework.R;
 import com.example.jimmy.androidcommonframework.utils.LogUtils;
 
 /**

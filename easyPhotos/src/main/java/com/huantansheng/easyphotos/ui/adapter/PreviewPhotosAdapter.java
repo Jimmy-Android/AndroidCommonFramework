@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import android.support.annotation.NonNull;
-import android.support.v4.content.FileProvider;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;

@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.net.Uri;
 import android.view.View;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.huantansheng.easyphotos.callback.SelectCallback;
 import com.huantansheng.easyphotos.constant.Type;

@@ -18,16 +18,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -44,6 +44,8 @@ import com.huantansheng.easyphotos.EasyPhotos;
 import com.huantansheng.easyphotos.R;
 import com.huantansheng.easyphotos.constant.Code;
 import com.huantansheng.easyphotos.constant.Key;
+import com.huantansheng.easyphotos.imaging2.IMGEditActivity;
+import com.huantansheng.easyphotos.imaging2.core.IMGMode;
 import com.huantansheng.easyphotos.models.ad.AdListener;
 import com.huantansheng.easyphotos.models.album.AlbumModel;
 import com.huantansheng.easyphotos.models.album.entity.Photo;
@@ -69,8 +71,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-import me.kareluo.imaging2.IMGEditActivity;
-import me.kareluo.imaging2.core.IMGMode;
 
 public class EasyPhotosActivity extends AppCompatActivity implements AlbumItemsAdapter.OnClickListener, PhotosAdapter.OnClickListener, AdListener, View.OnClickListener {
 
@@ -118,7 +118,7 @@ public class EasyPhotosActivity extends AppCompatActivity implements AlbumItemsA
         fragment.startActivityForResult(intent, requestCode);
     }
 
-    public static void start(android.support.v4.app.Fragment fragment, int requestCode) {
+    public static void start(androidx.fragment.app.Fragment fragment, int requestCode) {
         Intent intent = new Intent(fragment.getContext(), EasyPhotosActivity.class);
         fragment.startActivityForResult(intent, requestCode);
     }

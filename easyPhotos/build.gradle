@@ -22,9 +22,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     //noinspection GradleCompatible
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    compileOnly 'com.davemorrissey.labs:subsampling-scale-image-view:3.9.0'
-    compileOnly 'com.github.chrisbanes:PhotoView:2.1.4'
-    implementation project(':imaging')
+    api 'com.davemorrissey.labs:subsampling-scale-image-view:3.9.0'
+    api 'com.github.chrisbanes:PhotoView:2.1.4'
+//    implementation project(':imaging')
 }
 
 //// 指定编码
