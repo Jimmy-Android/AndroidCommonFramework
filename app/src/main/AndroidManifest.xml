@@ -19,14 +19,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.WelcomeNfcActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
         <!-- android:enabled="true" 设置service能否被android系统实例化，true能实例化，false不能实例化，默认值为：true，<application>也有这个字段-->
         <!-- android:exported="true" 指示其他应用程序的组件是否可以调用service或者和service交互-->
-        <service
-            android:name=".service.MyServiceOne"
-            android:enabled="true"
-            android:exported="true"></service>
-        <!-- BroadcastReceiver静态注册 -->
-        <!-- Android 4.3以上的版本，是允许将程序安装到SD卡上的，就会收不到开机广播 -->
         <receiver
             android:name=".receiver.PhoneStatusReceiver"
             android:enabled="true"
@@ -36,6 +49,8 @@
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
+        <!-- BroadcastReceiver静态注册 -->
+        <!-- Android 4.3以上的版本，是允许将程序安装到SD卡上的，就会收不到开机广播 -->
         <receiver android:name=".receiver.PhoneBootReceiver">
             <intent-filter>
                 <action android:name="android.intent.cation.BOOT_COMPLETED" />
@@ -46,11 +61,23 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".service.MyServiceOne"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- App权限 -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <!-- 监听手机开机权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 当前设备必须要有NFC芯片 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 </manifest>

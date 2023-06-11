@@ -14,13 +14,14 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven {
             url 'http://maven.aliyun.com/nexus/content/repositories/google/'
             name 'aliyun-google'
         }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         google()
+        jcenter()
     }
     // 依赖的插件
     dependencies {
@@ -50,14 +51,14 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven {
             url 'http://maven.aliyun.com/nexus/content/repositories/google/'
             name 'aliyun-google'
         }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        jcenter()
         google()
+        jcenter()
     }
 }
 

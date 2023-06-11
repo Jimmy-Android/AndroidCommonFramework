@@ -14,12 +14,14 @@ import com.example.jimmy.androidcommonframework.R;
 import com.example.jimmy.androidcommonframework.receiver.PhoneStatusReceiver;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by Jimmy on 2018/4/7.
  */
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     private static final String TAG = "MainActivity";
     private Intent intent;
     private Button button;
